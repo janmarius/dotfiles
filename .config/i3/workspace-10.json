@@ -1,0 +1,20 @@
+{
+    "border": "pixel",
+    "current_border_width": 0,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 458,
+       "width": 802,
+       "x": 0,
+       "y": 0
+    },
+    "name": "Terminal",
+    "percent": 1,
+    "swallows": [
+       {
+       "class": "^Xfce4-terminal$"
+       }
+    ],
+    "type": "con"
+}
+

@@ -1,0 +1,40 @@
+{
+    "border": "pixel",
+    "current_border_width": 0,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 953,
+       "width": 645,
+       "x": 0,
+       "y": 0
+    },
+    "name": "#general - Discord",
+    "percent": 0.3,
+    "swallows": [
+       {
+       "class": "^discord$"
+       }
+    ],
+    "type": "con"
+}
+
+{
+    "border": "pixel",
+    "current_border_width": 0,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 1023,
+       "width": 1890,
+       "x": 0,
+       "y": 0
+    },
+    "name": "Mozilla Firefox",
+    "percent": 0.7,
+    "swallows": [
+       {
+       "class": "^Firefox$"
+       }
+    ],
+    "type": "con"
+}
+
