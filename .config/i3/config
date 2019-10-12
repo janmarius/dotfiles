@@ -59,7 +59,7 @@ set $voice-communication "discord"
 
 # i3-Layouts Workspace 10
 #set $equalizer "xfce4-terminal --hide-menubar --hide-scrollbar -e vis"
-set $equalizer "urxvt -e vis"
+set $equalizer "urxvt -fn xft:monospace:size=10 -e vis"
 set $music-player "spotify"
 
 
