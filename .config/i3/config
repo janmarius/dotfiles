@@ -44,7 +44,7 @@ set $font-rofi "System San Francisco Display 18"
 set $wallpaper ~/Pictures/Wallpapers/matterhorn-mountain-at-sunset-wallpaper.jpg
 
 # Software
-set $terminal xfce4-terminal --hide-scrollbar --hide-menubar
+set $terminal urxvt
 set $web-browser firefox
 
 # i3-Layouts Workspace 8
@@ -58,7 +58,8 @@ set $chat "firefox --new-window https://www.messenger.com/"
 set $voice-communication "discord"
 
 # i3-Layouts Workspace 10
-set $equalizer "xfce4-terminal --hide-menubar --hide-scrollbar -e vis"
+#set $equalizer "xfce4-terminal --hide-menubar --hide-scrollbar -e vis"
+set $equalizer "urxvt -e vis"
 set $music-player "spotify"
 
 
@@ -313,7 +314,7 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 ###                         Startup Applications                        ###
 ###########################################################################
 
-exec        --no-startup-id compton -f
+exec_always        --no-startup-id compton --config ~/.config/compton/compton.conf
 exec_always --no-startup-id betterlockscreen -u $wallpaper -r 1920x1080
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
