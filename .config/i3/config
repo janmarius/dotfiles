@@ -314,9 +314,10 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 ###                         Startup Applications                        ###
 ###########################################################################
 
-exec_always        --no-startup-id compton --config ~/.config/compton/compton.conf
+exec_always --no-startup-id compton --config ~/.config/compton/compton.conf
 exec_always --no-startup-id betterlockscreen -u $wallpaper -r 1920x1080
 exec_always --no-startup-id ~/.config/polybar/launch.sh
+exec_always --no-startup-id pamac-tray
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.

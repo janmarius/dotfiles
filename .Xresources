@@ -1,4 +1,7 @@
-URxvt.font: xft:monospace:size=12
+Rxvt*font:                 xft:Inconsolata Nerd Font Mono:pixelsize=20:minspace=False, xft:DejaVu Sans:pixelsize=25
+URxvt*boldFont:             xft:Inconsolata Nerd Font Mono:pixelsize=20:minspace=False, xft:DejaVu Sans:pixelsize=25
+URxvt*letterSpace: -1
+!URxvt.font: xft:monospace:size=12
 URxvt.scrollBar: false
 
 ! Transparency
