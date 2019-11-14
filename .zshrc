@@ -8,11 +8,12 @@ ZSH=/usr/share/oh-my-zsh/
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnoster"
+#ZSH_THEME="robbyrussell"
+#ZSH_THEME="agnoster"
 
 # To hide user@hostname
-DEFAULT_USER=$USER
-prompt_context() {}
+#DEFAULT_USER=$USER
+#prompt_context() {}
 
 
 # Set list of themes to pick from when loading at random
@@ -76,6 +77,7 @@ ENABLE_CORRECTION="true"
 plugins=(git)
 
 
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -108,3 +110,6 @@ if [[ ! -d $ZSH_CACHE_DIR ]]; then
 fi
 
 source $ZSH/oh-my-zsh.sh
+#source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
+source ~/oh-my-zsh/agnoster.zsh-theme
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh

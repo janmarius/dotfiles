@@ -1,7 +1,14 @@
 ! xrdb .Xresources
+! URxvt*font: xft:DejaVu Sans Mono:size=12
+! URxvt*font: xft:Inconsolata Nerd Font Mono:pixelsize=20:minspace=False, xft:DejaVu Sans:pixelsize=25
+! URxvt*boldFont: xft:Inconsolata Nerd Font Mono:pixelsize=20:minspace=False, xft:DejaVu Sans:pixelsize=25
+URxvt*font:                 xft:DejaVu Sans Mono for Powerline:regular:size=15
+URxvt*imFont:               xft:DejaVu Sans Mono for Powerline:regular:size=15 
+URxvt*boldFont:             xft:DejaVu Sans Mono for Powerline:bold:size=15
+URxvt*italicFont:           xft:DejaVu Sans Mono for Powerline:italic:size=15
+URxvt*boldItalicFont:       xft:DejaVu Sans Mono for Powerline:bold:italic:size=15
 
-URxvt*font: xft:Inconsolata Nerd Font Mono:pixelsize=20:minspace=False, xft:DejaVu Sans:pixelsize=25
-URxvt*boldFont: xft:Inconsolata Nerd Font Mono:pixelsize=20:minspace=False, xft:DejaVu Sans:pixelsize=25
+
 URxvt*letterSpace: -1
 !URxvt.font: xft:monospace:size=12
 URxvt.scrollBar: false
@@ -17,25 +24,52 @@ URxvt*background: black
 URxvt*foreground: white
 
 ! Other colors
-URxvt*color0: black
+! Power Bar (Background): 
+!URxvt*color0: #000000
+URxvt*color0: #243a4d
+
 URxvt*color1: red3
-URxvt*color2: green3
+
+! Power Bar (Git - Ok): Light Green
+URxvt*color2: #55FF55
+
+! Power Bar (Git - Dirty working directory): Yellow
 URxvt*color3: yellow3
-URxvt*color4: blue2
+
+! Power Bar (Directory): 
+URxvt*color4: #577fa1
+
 URxvt*color5: magenta3
+
 URxvt*color6: cyan3
+
 URxvt*color7: gray90
+
 URxvt*color8: grey50
+
 URxvt*color9: red
+
 URxvt*color10: green
+
 URxvt*color11: yellow
-URxvt*color12: blue
-URxvt*color13: magenta
-URxvt*color14: cyan
-URxvt*color15: white
+
+
+! Directories: Light Blue
+URxvt*color12: #5555FF
+
+! Pictures: Light Magenta
+URxvt*color13: #FF55FF
+
+! Symbolic Links: Light Cyan
+URxvt*color14: #55FFFF
+
+URxvt*color15: magenta
+
+
+
 
 ! Cursor color
-URxvt*cursorColor: magenta
+URxvt*cursorColor: #577fa1
 
 ! Resize font with keybindings
 URxvt.perl-ext-common: resize-font, keyboard-select
