@@ -12,8 +12,8 @@ ZSH=/usr/share/oh-my-zsh/
 #ZSH_THEME="agnoster"
 
 # To hide user@hostname
-#DEFAULT_USER=$USER
-#prompt_context() {}
+DEFAULT_USER=$USER
+prompt_context() {}
 
 
 # Set list of themes to pick from when loading at random

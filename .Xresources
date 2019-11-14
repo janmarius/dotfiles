@@ -25,8 +25,7 @@ URxvt*foreground: white
 
 ! Other colors
 ! Power Bar (Background): 
-!URxvt*color0: #000000
-URxvt*color0: #243a4d
+URxvt*color0: #000000
 
 URxvt*color1: red3
 
@@ -37,7 +36,7 @@ URxvt*color2: #55FF55
 URxvt*color3: yellow3
 
 ! Power Bar (Directory): 
-URxvt*color4: #577fa1
+URxvt*color4: #3781BF
 
 URxvt*color5: magenta3
 
@@ -69,7 +68,7 @@ URxvt*color15: magenta
 
 
 ! Cursor color
-URxvt*cursorColor: #577fa1
+URxvt*cursorColor: white
 
 ! Resize font with keybindings
 URxvt.perl-ext-common: resize-font, keyboard-select
