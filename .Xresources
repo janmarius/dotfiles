@@ -2,11 +2,18 @@
 ! URxvt*font: xft:DejaVu Sans Mono:size=12
 ! URxvt*font: xft:Inconsolata Nerd Font Mono:pixelsize=20:minspace=False, xft:DejaVu Sans:pixelsize=25
 ! URxvt*boldFont: xft:Inconsolata Nerd Font Mono:pixelsize=20:minspace=False, xft:DejaVu Sans:pixelsize=25
-URxvt*font:                 xft:DejaVu Sans Mono for Powerline:regular:size=15
-URxvt*imFont:               xft:DejaVu Sans Mono for Powerline:regular:size=15 
-URxvt*boldFont:             xft:DejaVu Sans Mono for Powerline:bold:size=15
-URxvt*italicFont:           xft:DejaVu Sans Mono for Powerline:italic:size=15
-URxvt*boldItalicFont:       xft:DejaVu Sans Mono for Powerline:bold:italic:size=15
+!URxvt*allow_bold:           false
+
+#define fonts xft:DejaVu Sans Mono for Powerline:regular:size=15, \
+	      xft:Inconsolata Nerd Font Mono:pixelsize=20:minspace=False, \
+	      xft:DejaVu Sans:pixelsize=25
+
+
+URxvt*font:                 fonts 
+URxvt*imFont:               fonts 
+URxvt*boldFont:             fonts 
+URxvt*italicFont:           fonts 
+URxvt*boldItalicFont:       fonts 
 
 
 URxvt*letterSpace: -1
