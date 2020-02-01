@@ -20,11 +20,11 @@
 set $mod Mod4
 
 # Workspace Names
-set $ws1 "1 Home "
+set $ws1 "1 www "
 set $ws2 "2 Terminals "
 set $ws3 "3 Code "
-set $ws4 "4 www "
-set $ws5 "5 File Manager "
+set $ws4 "4 File Manager "
+set $ws5 "5 Workspace "
 set $ws6 "6 Workspace "
 set $ws7 "7 Workspace "
 set $ws8 "8 To-Do List "
@@ -41,7 +41,7 @@ set $font-size 13
 set $font-rofi "System San Francisco Display 18"
 
 # Wallpaper Path
-set $wallpaper ~/Pictures/Wallpapers/matterhorn-mountain-at-sunset-wallpaper.jpg
+set $wallpaper ~/Pictures/Wallpapers/mountains.jpg
 
 # Software
 set $terminal urxvt
@@ -128,9 +128,9 @@ bindsym XF86AudioPrev        exec --no-startup-id playerctl previous
 ###                                Rofi                                 ###
 ###########################################################################
 
-bindsym $mod+d exec rofi -show run -hide-scrollbar -font $font-rofi -lines 5 -width 30 -padding 50
-
-
+#bindsym $mod+d exec rofi -show run -hide-scrollbar -font $font-rofi -lines 5 -width 30 -padding 50
+#bindsym $mod+d exec rofi -show run -eh 2 -bw 400 -padding 1 -fullscreen
+bindsym $mod+d exec rofi -show drun -theme debxp-arc-dark-fullscreen.rasi
 
 
 
