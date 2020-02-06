@@ -66,6 +66,7 @@ set $music-player "spotify"
 
 # i3-Layouts Workspace 11
 set $code_editor code
+set $android_emulator Pixel_2_API_28
 
 
 
@@ -228,7 +229,7 @@ workspace $ws11 gaps left 500
 bindsym $mod+shift+F8  exec ~/.config/i3/ws8.sh $ws8 $to-do-list $calendar $notes-editor $notes-path
 bindsym $mod+shift+F9  exec ~/.config/i3/ws9.sh $ws9 $chat $voice-communication
 bindsym $mod+shift+F10 exec ~/.config/i3/ws10.sh $ws10 $equalizer $music-player
-bindsym $mod+shift+F11 exec ~/.config/i3/ws11.sh $ws11 $code_editor
+bindsym $mod+shift+F11 exec ~/.config/i3/ws11.sh $ws11 $code_editor $android_emulator
 
 # Exit i3-gaps
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
