@@ -161,9 +161,10 @@ for_window [class="Spotify"] move position 310 67
 
 
 for_window [title=".*Emulator.*"] floating enable
-for_window [title=".*Emulator.*"] move to workspace $ws11
-for_window [title=".*Emulator.*"] resize set 467 864
-for_window [title=".*Emulator.*"] move position 1 100
+#for_window [title=".*Emulator.*"] move to workspace $ws11
+assign [title=".*Emulator.*"] $ws11
+#for_window [title=".*Emulator.*"] resize set 467 864
+#for_window [title=".*Emulator.*"] move position 10 100
 
 
 

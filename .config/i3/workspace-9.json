@@ -12,7 +12,8 @@
     "percent": 0.3,
     "swallows": [
        {
-       "class": "^discord$"
+       "class": "^discord$",
+       "title": "^Discord$"
        }
     ],
     "type": "con"
