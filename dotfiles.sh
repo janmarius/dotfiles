@@ -12,7 +12,7 @@ CREATE_SYMBOLIC_LINKS () {
 	FILES=()
 
 	# Find all files and directories
-	ELEMENTS=($(ls -1A $1 */))
+	ELEMENTS=($(ls -1A $1))
 	for ELEMENT in ${ELEMENTS[@]};
 	do
 		if [[ -L $1$ELEMENT ]]; then
@@ -55,7 +55,7 @@ CREATE_SYMBOLIC_LINKS () {
 	done
 
 	# Find all files
-	ALL_FILES=($(ls -1A $1 */))
+	ALL_FILES=($(ls -1A $1))
 	SYMLINK_FILES=()
 
 	for FILE in ${ALL_FILES[@]};
@@ -73,6 +73,8 @@ CREATE_SYMBOLIC_LINKS () {
 		echo "Creating symbolic link: ln -s $1$FILE $2$FILE"
 		ln -s $1$FILE $2$FILE
 	done
+	echo "...done"
+	echo ""
 }
 
 CREATE_SYMBOLIC_LINKS $DIRECTORY1 $DIRECTORY2 $DIRECTORY3
