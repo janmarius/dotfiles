@@ -70,6 +70,7 @@ CREATE_SYMBOLIC_LINKS () {
 	# Creating symbolic link files for all dotfiles
 	echo "Creating symbolic link files for all dotfiles"
 	for FILE in ${SYMLINK_FILES[@]}; do
+		echo "Creating symbolic link: ln -s $1$FILE $2$FILE"
 		ln -s $1$FILE $2$FILE
 	done
 }
