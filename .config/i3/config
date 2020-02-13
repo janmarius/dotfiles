@@ -49,6 +49,9 @@ set $wallpaper ~/Pictures/Wallpapers/mountains.jpg
 set $terminal urxvt
 set $web-browser firefox
 
+# Cheat Sheets
+set $cheat-sheet1 feh --class float_feh -x. ~/.cheat-sheets/qutebrowser.png
+
 # i3-Layouts Workspace 8
 set $to-do-list "firefox --new-window https://www.todoist.com/"
 set $calendar "firefox --new-window https://www.google.com/calendar/"
@@ -140,6 +143,8 @@ bindsym $mod+d exec rofi -show drun -theme debxp-arc-dark-fullscreen.rasi
 
 
 
+
+
 ###########################################################################
 ###                         Workspace Settings                          ###
 ###########################################################################
@@ -165,6 +170,8 @@ for_window [title=".*Emulator.*"] floating enable
 assign [title=".*Emulator.*"] $ws11
 #for_window [title=".*Emulator.*"] resize set 467 864
 #for_window [title=".*Emulator.*"] move position 10 100
+
+for_window [class="float_feh"] floating enable
 
 
 
@@ -231,6 +238,9 @@ bindsym $mod+shift+F8  exec ~/.config/i3/ws8.sh $ws8 $to-do-list $calendar $note
 bindsym $mod+shift+F9  exec ~/.config/i3/ws9.sh $ws9 $chat $voice-communication
 bindsym $mod+shift+F10 exec ~/.config/i3/ws10.sh $ws10 $equalizer $music-player
 bindsym $mod+shift+F11 exec ~/.config/i3/ws11.sh $ws11 $code_editor $android_emulator
+
+# Cheat Sheets
+bindsym $mod+F1 exec $cheat-sheet1
 
 # Exit i3-gaps
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
