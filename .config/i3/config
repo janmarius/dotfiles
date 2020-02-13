@@ -43,7 +43,7 @@ set $font-size 13
 set $font-rofi "System San Francisco Display 18"
 
 # Wallpaper Path
-set $wallpaper ~/Pictures/Wallpapers/mountains.jpg
+set $wallpaper ~/.wallpapers/Mountain_Black_White.jpg
 
 # Software
 set $terminal urxvt
