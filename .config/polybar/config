@@ -14,8 +14,8 @@
 
 [colors]
 ; The first two hexadecimal are for transparency
-background = #AA000000
-background-alt = #AA000000
+background = #FA1C1F22
+background-alt = #FA1C1F22
 foreground = #dfdfdf
 foreground-alt = #dfdfdf
 primary = #C88A8A8A

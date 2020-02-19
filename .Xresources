@@ -25,7 +25,8 @@ URxvt.scrollBar: false
 !URxvt.shading: 5
 
 ! Background color
-URxvt*background: black
+!URxvt*background: black
+URxvt*background: #1C1F22
 
 ! Font color
 URxvt*foreground: white
