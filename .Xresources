@@ -72,14 +72,26 @@ URxvt*color14: #55FFFF
 
 URxvt*color15: magenta
 
-
-
-
 ! Cursor color
 URxvt*cursorColor: white
 
-! Resize font with keybindings
-URxvt.perl-ext-common: resize-font, keyboard-select
-URxvt.resize-font.smaller: C-j
-URxvt.resize-font.bigger: C-k
-URxvt.keysym.M-Escape: perl:keyboard-select:activate
+
+
+! URxvt Perl Extensions 
+URxvt.perl-ext-common:      resize-font,clipboard,url-select,keyboard-select
+
+! resize-font
+URxvt.resize-font.smaller:  C-j
+URxvt.resize-font.bigger:   C-k
+
+! clipboard
+URxvt.keysym.M-c:           perl:clipboard:copy
+URxvt.keysym.M-v:           perl:clipboard:paste
+
+! url-select
+URxvt.keysym.M-u:           perl:url-select:select_next
+URxvt.url-select.launcher:  /usr/bin/xdg-open
+URxvt.url-select.underline: true
+
+! keyboard-select
+URxvt.keysym.M-Escape:      perl:keyboard-select:activate
