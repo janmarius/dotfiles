@@ -20,18 +20,18 @@
 set $mod Mod4
 
 # Workspace Names
-set $ws1 "1 www "
-set $ws2 "2 Terminals "
-set $ws3 "3 Code "
-set $ws4 "4 File Manager "
-set $ws5 "5 Workspace "
-set $ws6 "6 Workspace "
-set $ws7 "7 Workspace "
-set $ws8 "8 To-Do List "
-set $ws9 "9 Chat "
-set $ws10 "10 Music "
-set $ws11 "11 Android "
-set $ws12 "12 System "
+set $ws1 "1 "
+set $ws2 "2 "
+set $ws3 "3 "
+set $ws4 "4 "
+set $ws5 "5 "
+set $ws6 "6 "
+set $ws7 "7 "
+set $ws8 "8 "
+set $ws9 "9 "
+set $ws10 "10 "
+set $ws11 "11 "
+set $ws12 "12 "
 
 # Monitor Outputs
 set $monitor1 "HDMI-0"
@@ -53,9 +53,12 @@ set $web-browser firefox
 set $cheat-sheet1 /usr/bin/xdg-open ~/.cheat-sheets/general.pdf
 set $cheat-sheet2 feh --class float_feh -x. ~/.cheat-sheets/qutebrowser.png
 
+# i3-Layouts Workspace 4
+set $file-manager "urxvt -e ranger"
+
 # i3-Layouts Workspace 8
-set $to-do-list "firefox --new-window https://www.todoist.com/"
-set $calendar "firefox --new-window https://www.google.com/calendar/"
+set $to-do-list "surf https://www.todoist.com/"
+set $calendar "surf https://www.google.com/calendar/"
 set $notes-editor mousepad 
 set $notes-path ~/Documents/Notes.txt
 
@@ -235,6 +238,7 @@ workspace $ws11 gaps left 500
 ###########################################################################
 
 # i3-Layout Scripts
+bindsym $mod+shift+F4  exec ~/.config/i3/ws4.sh $ws4 $file-manager
 bindsym $mod+shift+F8  exec ~/.config/i3/ws8.sh $ws8 $to-do-list $calendar $notes-editor $notes-path
 bindsym $mod+shift+F9  exec ~/.config/i3/ws9.sh $ws9 $chat $voice-communication
 bindsym $mod+shift+F10 exec ~/.config/i3/ws10.sh $ws10 $equalizer $music-player
