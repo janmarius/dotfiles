@@ -168,6 +168,8 @@ for_window [class="Spotify"] floating enable
 for_window [class="Spotify"] resize set 1300 660
 for_window [class="Spotify"] move position 310 67
 
+for_window [class="Pavucontrol"] floating enable
+for_window [class="Pavucontrol"] resize set 1300 800
 
 for_window [title=".*Emulator.*"] floating enable
 #for_window [title=".*Emulator.*"] move to workspace $ws11
@@ -212,6 +214,10 @@ for_window [class=".*"] border pixel 2
 gaps inner 10
 gaps outer 5
 
+# Workspace 3
+workspace $ws3 gaps inner0
+workspace $ws3 gaps outer0
+
 # Workspace 8
 workspace $ws8 gaps inner0
 workspace $ws8 gaps outer0
@@ -236,6 +242,8 @@ workspace $ws11 gaps left 500
 ###########################################################################
 ###                             Keybindings                             ###
 ###########################################################################
+# Applications
+bindsym $mod+s exec flameshot gui
 
 # i3-Layout Scripts
 bindsym $mod+shift+F4  exec ~/.config/i3/ws4.sh $ws4 $file-manager
