@@ -197,6 +197,8 @@ exec_always feh --bg-scale $wallpaper
 ###                          Display Settings                           ###
 ###########################################################################
 
+exec xrandr --output $monitor1 --mode 1920x1080
+exec xrandr --output $monitor2 --mode 1920x1080
 exec xrandr --output $monitor1 --right-of $monitor2
 
 
