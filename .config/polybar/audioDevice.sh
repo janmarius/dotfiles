@@ -1,11 +1,8 @@
 #!/bin/bash
 
-DEVICE=`pactl list short sinks | grep RUNNING | awk -F' ' '{print $2}'`
-
-if [ "$DEVICE" == "alsa_output.usb-Conexant_Sennheiser_Main_Audio_00000000-00.analog-stereo" ]; then
+DEVICE=`pactl list short sink-inputs | grep -n 1 | awk -F' ' '{print $2}'`
+if [ "$DEVICE" == "0" ]; then
 	echo ""
-elif [ "$DEVICE" == "alsa_output.pci-0000_00_1f.3.analog-stereo" ]; then
+elif [ "$DEVICE" == "7" ]; then
 	echo ""
-else
-	echo ""
 fi
