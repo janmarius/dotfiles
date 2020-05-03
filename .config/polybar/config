@@ -59,7 +59,7 @@ font-5 = FontAwesome5Brands:style=Regular:size=10;0
 
 modules-left = i3 
 modules-center = mpd spotify
-modules-right = filesystem_root filesystem_home filesystem_onedrive xbacklight memory cpu wlan eth battery temperature pulseaudio xkeyboard date powermenu
+modules-right = filesystem_root filesystem_home filesystem_onedrive xbacklight memory cpu wlan eth battery temperature pulseaudio audio_device keyboard date powermenu
 
 tray-position = right
 tray-padding = 2
@@ -70,6 +70,15 @@ cursor-scroll = ns-resize
 bottom = false
 
 
+
+[module/audio_device]
+type = custom/script
+exec = ~/.config/polybar/audioDevice.sh
+;exec-if = pactl list short sinks | grep RUNNING | awk -F' ' '{print $2}' 
+interval = 5 
+;format-underline = #268bd2
+;format-prefix = "dsfs"
+;format-prefix-foreground = #5b
 
 
 
