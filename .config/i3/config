@@ -49,6 +49,10 @@ set $wallpaper ~/.wallpapers/Skyline.jpg
 set $terminal urxvt
 set $web-browser firefox
 
+# Audio Devices
+set $audio-device-1 alsa_output.usb-Conexant_Sennheiser_Main_Audio_00000000-00.analog-stereo
+set $audio-device-2 alsa_output.pci-0000_00_1f.3.analog-stereo
+
 # Cheat Sheets
 set $cheat-sheet1 /usr/bin/xdg-open ~/.cheat-sheets/general.pdf
 set $cheat-sheet2 feh --class float_feh -x. ~/.cheat-sheets/qutebrowser.png
@@ -244,6 +248,9 @@ workspace $ws11 gaps left 500
 ###########################################################################
 ###                             Keybindings                             ###
 ###########################################################################
+# Toggle Audio Device
+bindsym $mod+x exec ~/.config/i3/someAudioScript.sh $audio-device-1 $audio-device-2
+
 # Applications
 bindsym $mod+s exec flameshot gui
 
