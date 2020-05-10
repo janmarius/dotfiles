@@ -256,6 +256,7 @@ bindsym $mod+s exec flameshot gui
 
 # i3-Layout Scripts
 bindsym $mod+shift+F4  exec ~/.config/i3/ws4.sh $ws4 $file-manager
+bindsym $mod+shift+F5  exec ~/.config/i3/dmenu-manpages.sh $terminal
 bindsym $mod+shift+F8  exec ~/.config/i3/ws8.sh $ws8 $to-do-list $calendar $notes-editor $notes-path
 bindsym $mod+shift+F9  exec ~/.config/i3/ws9.sh $ws9 $chat $voice-communication
 bindsym $mod+shift+F10 exec ~/.config/i3/ws10.sh $ws10 $equalizer $music-player
