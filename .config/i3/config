@@ -291,6 +291,9 @@ bindsym $mod+m fullscreen toggle
 bindsym $mod+shift+m move workspace to output right
 # bindsym $mod+shift+u move workspace to output left
 
+# Swapping workspaces among the monitors
+bindsym $mod+shift+n exec ~/.config/i3/i3-display-swap.sh
+
 # Use Mouse+$mod to Drag Floating Windows to their Wanted Position
 floating_modifier $mod
 
