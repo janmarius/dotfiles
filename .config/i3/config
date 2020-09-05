@@ -43,10 +43,10 @@ set $font-size 13
 set $font-rofi "System San Francisco Display 18"
 
 # Wallpaper Path
-set $wallpaper ~/.wallpapers/Skyline.jpg
+set $wallpaper ~/Desktop/wallpapers_distrotube/0264.jpg
 
 # Software
-set $terminal urxvt
+set $terminal alacritty
 set $web-browser firefox
 
 # Audio Devices
@@ -58,7 +58,7 @@ set $cheat-sheet1 /usr/bin/xdg-open ~/.cheat-sheets/general.pdf
 set $cheat-sheet2 feh --class float_feh -x. ~/.cheat-sheets/qutebrowser.png
 
 # i3-Layouts Workspace 4
-set $file-manager "urxvt -e ranger"
+set $file-manager "alacritty -e ranger"
 
 # i3-Layouts Workspace 8
 set $to-do-list "surf https://www.todoist.com/"
@@ -93,7 +93,7 @@ set $text-color                 #FFFFFF
 set $indicator-color            #16161A
 set $indicator-focused-color    #828282
 set $child-border-color         #16161A
-set $child-border-focused-color #2B2B2F
+set $child-border-focused-color #B0B1B1
 set $client-background          #FFFFFF
  
 # Class                      Border          Background         Text            Indicator                Child Border
