@@ -111,6 +111,7 @@ fi
 
 source $ZSH/oh-my-zsh.sh
 #source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
-source ~/.oh-my-zsh/agnoster.zsh-theme
+#source ~/.oh-my-zsh/agnoster.zsh-theme
 #source ~/.oh-my-zsh/bullet-train.zsh-theme
+source ~/.oh-my-zsh/oxide.zsh-theme
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
