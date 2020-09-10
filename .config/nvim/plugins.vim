@@ -16,6 +16,10 @@ call plug#begin('~/.vim/plugged')
 	" https://github.com/joshdick/onedark.vim
 	Plug 'joshdick/onedark.vim'
 
+	" Vim plugin for the Oz language
+	" https://github.com/Procrat/oz.vim
+	Plug 'Procrat/oz.vim'
+
 	" Color highlighter for Neovim
 	" https://github.com/norcalli/nvim-colorizer.lua
 	Plug 'norcalli/nvim-colorizer.lua'

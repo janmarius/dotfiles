@@ -59,7 +59,7 @@ font-5 = FontAwesome5Brands:style=Regular:size=10;0
 
 modules-left = i3 
 modules-center = mpd spotify
-modules-right = filesystem_root filesystem_home filesystem_onedrive xbacklight memory cpu wlan eth battery temperature pulseaudio audio_device keyboard date powermenu
+modules-right = filesystem_root filesystem_home filesystem_onedrive update xbacklight memory cpu wlan eth battery temperature pulseaudio audio_device date powermenu
 
 tray-position = right
 tray-padding = 2
@@ -69,6 +69,12 @@ cursor-scroll = ns-resize
 
 bottom = false
 
+[module/update]
+type = custom/script
+exec = yay -Qu | wc -l
+interval = 1000
+label = %output%
+format-prefix = " "
 
 
 [module/audio_device]
@@ -450,7 +456,7 @@ ramp-foreground = ${colors.foreground-alt}
 [module/powermenu]
 type = custom/menu
 
-expand-right = true
+expand-right = false
 
 format-spacing = 1
 
@@ -461,10 +467,12 @@ label-close-foreground = ${colors.foreground-alt}
 label-separator = |
 label-separator-foreground = ${colors.foreground-alt}
 
-menu-0-0 = 
-menu-0-0-exec = reboot
-menu-0-1 = 
-menu-0-1-exec = shutdown now
+menu-0-0 = 
+menu-0-0-exec = i3-msg exit
+menu-0-1 = 
+menu-0-1-exec = reboot
+menu-0-2 = 
+menu-0-2-exec = shutdown now
 
 
 
