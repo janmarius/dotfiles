@@ -29,6 +29,10 @@ call plug#begin('~/.vim/plugged')
 	Plug 'vim-airline/vim-airline'
 	Plug 'vim-airline/vim-airline-themes'
 
+	" A Vim Plugin for Lively Previewing LaTeX PDF Output
+	" https://github.com/xuhdev/vim-latex-live-preview
+	Plug 'xuhdev/vim-latex-live-preview'
+
 	" Color scheme - Inspired by the Dark+ scheme of Visual Studio Code
 	" https://github.com/tomasiser/vim-code-dark
 	Plug 'tomasiser/vim-code-dark'

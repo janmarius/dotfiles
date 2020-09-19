@@ -145,8 +145,6 @@ bindsym XF86AudioPrev        exec --no-startup-id playerctl previous
 ###                                Rofi                                 ###
 ###########################################################################
 
-#bindsym $mod+d exec rofi -show run -hide-scrollbar -font $font-rofi -lines 5 -width 30 -padding 50
-#bindsym $mod+d exec rofi -show run -eh 2 -bw 400 -padding 1 -fullscreen
 bindsym $mod+d exec rofi -show drun -theme debxp-arc-dark-fullscreen.rasi
 
 
@@ -176,12 +174,25 @@ for_window [class="Pavucontrol"] floating enable
 for_window [class="Pavucontrol"] resize set 1300 800
 
 for_window [title=".*Emulator.*"] floating enable
-#for_window [title=".*Emulator.*"] move to workspace $ws11
 assign [title=".*Emulator.*"] $ws11
-#for_window [title=".*Emulator.*"] resize set 467 864
-#for_window [title=".*Emulator.*"] move position 10 100
 
 for_window [class="float_feh"] floating enable
+
+# Making Cheat Sheets Floating
+for_window [title=".*.cheat-sheets/general.pdf.*"] floating enable
+
+
+
+
+
+###########################################################################
+###                              Scratchpad                             ###
+###########################################################################
+
+for_window [title="dropdown-terminal"] floating enable
+for_window [title="dropdown-terminal"] resize set 1200 600
+for_window [title="dropdown-terminal"] move scratchpad
+exec --no-startup-id $terminal --title "dropdown-terminal"
 
 
 
@@ -220,6 +231,10 @@ for_window [class=".*"] border pixel 2
 gaps inner 10
 gaps outer 5
 
+# Workspace 1
+workspace $ws1 gaps inner0
+workspace $ws1 gaps outer0
+
 # Workspace 3
 workspace $ws3 gaps inner0
 workspace $ws3 gaps outer0
@@ -248,26 +263,6 @@ workspace $ws11 gaps left 500
 ###########################################################################
 ###                             Keybindings                             ###
 ###########################################################################
-# Toggle Audio Device
-bindsym $mod+x exec ~/.config/i3/someAudioScript.sh $audio-device-1 $audio-device-2
-
-# Applications
-bindsym $mod+s exec flameshot gui
-
-# i3-Layout Scripts
-bindsym $mod+shift+F4  exec ~/.config/i3/ws4.sh $ws4 $file-manager
-bindsym $mod+shift+F5  exec ~/.config/i3/dmenu-manpages.sh $terminal
-bindsym $mod+shift+F8  exec ~/.config/i3/ws8.sh $ws8 $to-do-list $calendar $notes-editor $notes-path
-bindsym $mod+shift+F9  exec ~/.config/i3/ws9.sh $ws9 $chat $voice-communication
-bindsym $mod+shift+F10 exec ~/.config/i3/ws10.sh $ws10 $equalizer $music-player
-bindsym $mod+shift+F11 exec ~/.config/i3/ws11.sh $ws11 $code_editor $android_emulator
-
-# Cheat Sheets
-bindsym $mod+F1 exec $cheat-sheet1
-bindsym $mod+F2 exec $cheat-sheet2
-
-# Exit i3-gaps
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # Start Terminal
 bindsym $mod+Return exec $terminal
@@ -275,11 +270,37 @@ bindsym $mod+Return exec $terminal
 # Kill Focused Window
 bindsym $mod+Shift+q kill
 
+# Restart i3-gaps
+bindsym $mod+Shift+r restart
+
 # Reload the Configuration File
 bindsym $mod+Shift+c reload
 
-# Restart i3-gaps
-bindsym $mod+Shift+r restart
+# Toggle Audio Device
+bindsym $mod+x exec ~/.config/i3/audio-switcher.sh $audio-device-1 $audio-device-2
+
+# Applications
+bindsym $mod+s exec flameshot gui
+bindsym $mod+w exec $web-browser
+bindsym $mod+F5  exec ~/.config/i3/dmenu-manpages.sh $terminal
+
+# Scratchpad
+bindsym $mod+t [title="dropdown-terminal"] scratchpad show; [title="dropdown-terminal"] move position center
+bindsym $mod+shift+t exec $terminal --title "dropdown-terminal"
+
+# i3-Layout Scripts
+bindsym $mod+shift+F4  exec ~/.config/i3/ws4.sh $ws4 $file-manager
+bindsym $mod+shift+F8  exec ~/.config/i3/ws8.sh $ws8 $to-do-list $calendar $notes-editor $notes-path
+bindsym $mod+shift+F9  exec ~/.config/i3/ws9.sh $ws9 $chat $voice-communication
+bindsym $mod+shift+F10 exec ~/.config/i3/ws10.sh $ws10 $equalizer $music-player
+bindsym $mod+shift+F11 exec ~/.config/i3/ws11.sh $ws11 $code_editor $android_emulator
+
+# Cheat Sheets
+bindsym $mod+F3 exec $cheat-sheet1
+bindsym $mod+F2 exec $cheat-sheet2
+
+# Exit i3-gaps
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # Toggle Split
 bindsym $mod+p split toggle
@@ -291,7 +312,7 @@ bindsym $mod+m fullscreen toggle
 bindsym $mod+shift+m move workspace to output right
 # bindsym $mod+shift+u move workspace to output left
 
-# Swapping workspaces among the monitors
+# Swapping Workspaces Among the Monitors
 bindsym $mod+shift+n exec ~/.config/i3/i3-display-swap.sh
 
 # Use Mouse+$mod to Drag Floating Windows to their Wanted Position
@@ -331,10 +352,10 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # Resize Focused Window
-bindsym $mod+y resize shrink width 1 px or 1 ppt
-bindsym $mod+u resize shrink height 1 px or 1 ppt
-bindsym $mod+i resize grow height 1 px or 1 ppt
-bindsym $mod+o resize grow width 1 px or 1 ppt
+bindsym $mod+y resize shrink width 2 px or 2 ppt
+bindsym $mod+u resize shrink height 2 px or 2 ppt
+bindsym $mod+i resize grow height 2 px or 2 ppt
+bindsym $mod+o resize grow width 2 px or 2 ppt
 
 # Switch to Workspace
 bindsym $mod+1         workspace number $ws1
@@ -372,11 +393,12 @@ bindsym $mod+Shift+backslash move container to workspace number $ws12
 ###                         Startup Applications                        ###
 ###########################################################################
 
-exec_always --no-startup-id picom --config ~/.config/picom/picom.conf
+#exec_always --no-startup-id picom --config ~/.config/picom/picom.conf
 exec_always --no-startup-id betterlockscreen -u $wallpaper -r 1920x1080
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec_always --no-startup-id pamac-tray
 exec_always --no-startup-id numlockx
+exec_always --no-startup-id ntfd
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
