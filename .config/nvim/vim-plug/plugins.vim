@@ -8,6 +8,13 @@ call plug#begin('~/.vim/plugged')
 	" https://github.com/jiangmiao/auto-pairs
 	Plug 'jiangmiao/auto-pairs'
 
+	" Conquer of Completion - Make your Neovim as smart as VSCode
+	" https://github.com/neoclide/coc.nvim
+	" Use release branch (recommend)
+	Plug 'neoclide/coc.nvim', {'branch': 'release'}
+	" Or build from source code by using yarn: https://yarnpkg.com
+	"Plug 'neoclide/coc.nvim', {'do', 'yarn install --frozen-lockfile'}
+	
 	" Distraction-free writing in Neovim
 	" https://github.com/junegunn/goyo.vim
 	Plug 'junegunn/goyo.vim'

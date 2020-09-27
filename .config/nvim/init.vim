@@ -22,8 +22,10 @@ source $HOME/.config/nvim/color-schemes/tomasiser-vim-code-dark.vim
 "source $HOME/.config/nvim/color-schemes/arcticicestudio-nord-vim.vim
 "source $HOME/.config/nvim/color-schemes/morhetz-gruvbox.vim
 
+" Plugin Configurations
 source $HOME/.config/nvim/plug-config/junegunn-goyo.vim
 source $HOME/.config/nvim/plug-config/lervag-vimtex.vim
 source $HOME/.config/nvim/plug-config/norcalli-nvim-colorizer.vim
 source $HOME/.config/nvim/plug-config/preservim-nerdtree.vim
 source $HOME/.config/nvim/plug-config/xuhdev-vim-latex-live-preview.vim
+source $HOME/.config/nvim/plug-config/neoclide-coc.vim
