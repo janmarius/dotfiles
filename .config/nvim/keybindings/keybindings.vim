@@ -29,7 +29,7 @@ map <Leader>tk <C-w>t<C-w>K
 
 
 
-" Better tabbing
+" Better tabbing - make it able to tab multiple times
 vnoremap < <gv
 vnoremap > >gv
 
