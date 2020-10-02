@@ -81,22 +81,12 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = System San Francisco Display:size=10.5;1
-font-1 = Font Awesome 5 Free:style=Solid:size=10;1
-font-2 = Font Awesome 5 Free:style=Regular:size=10;1
-font-3 = Font Awesome 5 Brands:style=Regular:size=10;1
-font-4 = Weather Icons:size=10.7;1
-;font-3 = FontAwesome5Free:style=Solid:size=10;0
-;font-4 = FontAwesome5Free:style=Regular:size=10;0
-;font-5 = FontAwesome5Brands:style=Regular:size=10;0
-
-;font-0 = fixed:pixelsize=10;1
-;font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-;font-2 = siji:pixelsize=10;1
-;font-3 = FontAwesome5Free:style=Solid:size=10;0
-;font-4 = FontAwesome5Free:style=Regular:size=10;0
-;font-5 = FontAwesome5Brands:style=Regular:size=10;0
-;; Font for the Weather Module - not working
+; When using label-active-font, font-0 is 1 and so on
+font-0 = System San Francisco Display:size=10.5;2
+font-1 = Font Awesome 5 Free:style=Solid:size=9.0;1.5
+font-2 = Font Awesome 5 Free:style=Regular:size=9.0;1.5
+font-3 = Font Awesome 5 Brands:style=Regular:size=9.0;1.5
+font-4 = Weather Icons:size=11;2
 
 tray-position = right
 tray-padding = 2
