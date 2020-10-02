@@ -56,7 +56,7 @@ screenchange-reload = true
 [bar/example]
 modules-left = i3 
 modules-center = spotify
-modules-right = root home onedrive updates memory cpu temperature pulseaudio audiodevice xkeyboard weather date powermenu
+modules-right = onedrive updates memory cpu temperature pulseaudio audiodevice xkeyboard weather date powermenu
 
 monitor = ${env:MONITOR:}
 width = 100%
@@ -199,7 +199,7 @@ label-unmounted-foreground = ${colors.foreground-alt}
 
 [module/updates]
 type = custom/script
-format-prefix = " "
+format-prefix = " "
 exec = sleep 10 && yay -Qu | wc -l
 interval = 600
 label = %output%
