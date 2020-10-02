@@ -29,7 +29,7 @@ set $ws6 "6 "
 set $ws7 "7 "
 set $ws8 "8 "
 set $ws9 "9 "
-set $ws10 "10 "
+set $ws10 "10 ﱘ"
 set $ws11 "11 "
 set $ws12 "12 "
 
@@ -38,8 +38,8 @@ set $monitor1 "HDMI-0"
 set $monitor2 "DVI-D-0"
 
 # Fonts
-set $font System San Francisco Display
-set $font-size 13
+set $font "Hack Nerd Font"
+set $font-size 10
 set $font-rofi "System San Francisco Display 18"
 
 # Wallpaper Path

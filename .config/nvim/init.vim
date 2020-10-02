@@ -28,4 +28,4 @@ source $HOME/.config/nvim/plug-config/lervag-vimtex.vim
 source $HOME/.config/nvim/plug-config/norcalli-nvim-colorizer.vim
 source $HOME/.config/nvim/plug-config/preservim-nerdtree.vim
 source $HOME/.config/nvim/plug-config/xuhdev-vim-latex-live-preview.vim
-source $HOME/.config/nvim/plug-config/neoclide-coc.vim
+"source $HOME/.config/nvim/plug-config/neoclide-coc.vim
