@@ -56,7 +56,7 @@ screenchange-reload = true
 [bar/example]
 modules-left = i3 
 modules-center = spotify
-modules-right = onedrive updates memory cpu temperature pulseaudio audiodevice xkeyboard weather date powermenu
+modules-right = updates memory cpu temperature pulseaudio audiodevice xkeyboard weather date powermenu
 
 monitor = ${env:MONITOR:}
 width = 100%
@@ -87,6 +87,7 @@ font-1 = Font Awesome 5 Free:style=Solid:size=9.0;1.5
 font-2 = Font Awesome 5 Free:style=Regular:size=9.0;1.5
 font-3 = Font Awesome 5 Brands:style=Regular:size=9.0;1.5
 font-4 = Weather Icons:size=11;2
+font-5 = Hack Nerd Font:size=10.5;2
 
 tray-position = right
 tray-padding = 2
@@ -200,10 +201,10 @@ label-unmounted-foreground = ${colors.foreground-alt}
 [module/updates]
 type = custom/script
 format-prefix = " "
-exec = sleep 10 && yay -Qu | wc -l
-interval = 600
+exec = echo `checkupdates 2> /dev/null | wc -l`  `yay -Qum 2> /dev/null | wc -l`
+interval = 900
 label = %output%
-label-active-font = 1
+label-font = 6
 
 
 
