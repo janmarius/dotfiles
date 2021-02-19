@@ -3,7 +3,7 @@
 "nnoremap <C-j> <C-w>j
 "nnoremap <C-k> <C-w>k
 "nnoremap <C-l> <C-w>l
-
+tnoremap <Esc> <C-\><C-n>
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
