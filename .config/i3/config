@@ -167,8 +167,8 @@ assign [class="discord"] $ws9
 
 for_window [class="Spotify"] move to workspace $ws10
 for_window [class="Spotify"] floating enable
-for_window [class="Spotify"] resize set 1300 660
-for_window [class="Spotify"] move position 310 67
+for_window [class="Spotify"] resize set 1320 655
+for_window [class="Spotify"] move position 300 67
 
 for_window [class="Pavucontrol"] floating enable
 for_window [class="Pavucontrol"] resize set 1300 800

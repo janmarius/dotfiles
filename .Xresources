@@ -41,7 +41,7 @@ URxvt*letterSpace:          -1
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! Background color
 !URxvt*background: black
-URxvt*background: #1C1F22
+URxvt*background: #121212
 
 ! Font color
 URxvt*foreground: white

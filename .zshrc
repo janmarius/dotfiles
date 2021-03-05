@@ -104,6 +104,13 @@ plugins=(git)
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias gh="cd ~"
+alias gconf="cd ~/.config"
+alias gdo="cd ~/Downloads"
+alias gde="cd ~/Desktop"
+alias god="cd /home/onedrive"
+
+
 
 ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
 if [[ ! -d $ZSH_CACHE_DIR ]]; then
