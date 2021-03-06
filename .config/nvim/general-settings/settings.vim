@@ -46,6 +46,8 @@ set clipboard+=unnamedplus			" Copy paste between vim and everything else
 "set autochdir						" Your working directory will always be the same as your working directory
 
 
+" 
+set modifiable
 
 set smartcase						" Automatically switch search to case-sensitive when search query contains an uppercase letter.
 set colorcolumn=80

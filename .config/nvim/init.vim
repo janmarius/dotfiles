@@ -23,6 +23,7 @@ source $HOME/.config/nvim/color-schemes/tomasiser-vim-code-dark.vim
 "source $HOME/.config/nvim/color-schemes/morhetz-gruvbox.vim
 
 " Plugin Configurations
+source $HOME/.config/nvim/plug-config/fzf.vim
 source $HOME/.config/nvim/plug-config/junegunn-goyo.vim
 source $HOME/.config/nvim/plug-config/lervag-vimtex.vim
 source $HOME/.config/nvim/plug-config/norcalli-nvim-colorizer.vim

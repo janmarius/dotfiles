@@ -105,7 +105,7 @@ plugins=(git)
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias gh="cd ~"
-alias gconf="cd ~/.config"
+alias g.c="cd ~/.config"
 alias gdo="cd ~/Downloads"
 alias gde="cd ~/Desktop"
 alias god="cd /home/onedrive"
@@ -123,3 +123,5 @@ source $ZSH/oh-my-zsh.sh
 #source ~/.oh-my-zsh/bullet-train.zsh-theme
 source ~/.oh-my-zsh/oxide.zsh-theme
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+#source /usr/share/fzf/key-bindings.zsh
+#source /usr/share/fzf/completion.zsh

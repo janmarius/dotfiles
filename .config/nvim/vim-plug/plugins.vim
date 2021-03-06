@@ -15,6 +15,11 @@ call plug#begin('~/.vim/plugged')
 	" Or build from source code by using yarn: https://yarnpkg.com
 	"Plug 'neoclide/coc.nvim', {'do', 'yarn install --frozen-lockfile'}
 	
+	" fzf is a general-purpose command-line fuzzy finder	
+	" https://github.com/junegunn/fzf
+	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+	Plug 'junegunn/fzf.vim'
+	
 	" Distraction-free writing in Neovim
 	" https://github.com/junegunn/goyo.vim
 	Plug 'junegunn/goyo.vim'
