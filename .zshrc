@@ -109,6 +109,7 @@ alias g.c="cd ~/.config"
 alias gdo="cd ~/Downloads"
 alias gde="cd ~/Desktop"
 alias god="cd /home/onedrive"
+alias gog="cd /home/onedrive/Guides"
 
 
 

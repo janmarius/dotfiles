@@ -43,7 +43,7 @@ set $font-size 13
 set $font-rofi "System San Francisco Display 18"
 
 # Wallpaper Path
-set $wallpaper ~/Desktop/wallpapers_distrotube/0264.jpg
+set $wallpaper ~/../onedrive/Bilder/Wallpaper/Mario-mario-wallpaper-hd-games-1920x1080.jpg
 
 # Software
 set $terminal alacritty
@@ -127,8 +127,8 @@ font pango:$font $font-size
 # Media Player Controls
 set $refresh_i3status killall -SIGUSR1 i3status
 
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl     set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl     set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl     set-sink-volume @DEFAULT_SINK@ +1% && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl     set-sink-volume @DEFAULT_SINK@ -1% && $refresh_i3status
 bindsym XF86AudioMute        exec --no-startup-id pactl     set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute     exec --no-startup-id pactl     set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 bindsym XF86AudioPlay        exec --no-startup-id playerctl play-pause
@@ -214,7 +214,7 @@ exec_always feh --bg-scale $wallpaper
 
 exec xrandr --output $monitor1 --mode 1920x1080
 exec xrandr --output $monitor2 --mode 1920x1080
-exec xrandr --output $monitor1 --right-of $monitor2
+exec xrandr --output $monitor1 --primary --right-of $monitor2
 
 
 
