@@ -80,6 +80,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.02} },
 	{ MODKEY|ShiftMask,             XK_Return, zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
+	{ MODKEY|ShiftMask,             XK_f,      togglefullscr,  {0} },
 
 
 	/* modifier                     key        function        argument */
