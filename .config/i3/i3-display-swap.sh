@@ -1,16 +1,20 @@
-#!/usr/bin/env bash
-# requires jq
-# Source: https://gist.github.com/fbrinker/df9cfbc84511d807f45041737ff3ea02
+#!/bin/bash
 
-IFS=:
-INITIAL_WORKSPACE=$(i3-msg -t get_workspaces \
-  | jq '.[] | select(.focused==true).name' \
-  | cut -d"\"" -f2)
+CURRENT_WORKSPACE=$(i3-msg -t get_workspaces \
+					| jq '.[] | select(.visible==true and .focused==true).name')
+OTHER_WORKSPACE=$(i3-msg -t get_workspaces \
+					| jq '.[] | select(.visible==true and .focused==false).name')
+PRIMARY_WORKSPACE=$(i3-msg -t get_outputs \
+					| jq '.[] | select(.primary==true).current_workspace')
 
-i3-msg -t get_outputs | jq -r '.[]|"\(.name):\(.current_workspace)"' | grep -v '^null:null$' | \
-while read -r name current_workspace; do
-    echo "moving ${current_workspace} right..."
-    i3-msg workspace "${current_workspace}"
-    i3-msg move workspace to output right   
-done
-i3-msg workspace $INITIAL_WORKSPACE
+if [[ $CURRENT_WORKSPACE == $PRIMARY_WORKSPACE ]]; then
+	i3-msg -q workspace $CURRENT_WORKSPACE
+	i3-msg -q move workspace to output right
+	i3-msg -q workspace $OTHER_WORKSPACE
+	i3-msg -q move workspace to output right
+else
+	i3-msg -q workspace $OTHER_WORKSPACE
+	i3-msg -q move workspace to output right
+	i3-msg -q workspace $CURRENT_WORKSPACE
+	i3-msg -q move workspace to output right
+fi

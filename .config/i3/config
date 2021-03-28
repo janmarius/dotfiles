@@ -284,6 +284,7 @@ bindsym $mod+Shift+c reload
 bindsym $mod+x exec ~/.config/i3/audio-switcher.sh $audio-device-1 $audio-device-2
 
 # Applications
+bindsym $mod+f exec thunar
 bindsym $mod+s exec flameshot gui
 bindsym $mod+w exec $web-browser
 bindsym $mod+F5  exec ~/.config/i3/dmenu-manpages.sh $terminal
