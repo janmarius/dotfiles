@@ -59,8 +59,18 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "alacritty", NULL };
+static const char *audioraisevolume[] = {"pactl", "set-sink-volume", "@DEFAULT_SINK@", "+1%", NULL};
+static const char *audiolowervolume[] = {"pactl", "set-sink-volume", "@DEFAULT_SINK@", "-1%", NULL};
+static const char *audiomute[] = {"pactl", "set-sink-mute", "@DEFAULT_SINK@", "toggle", NULL};
+static const char *audiomicmute[] = {"pactl", "set-source-mute", "@DEFAULT_SOURCE@", "toggle", NULL};
+static const char *audioplay[] = {"playerctl", "play-pause", NULL};
+static const char *audiopause[] = {"playerctl", "pause", NULL};
+static const char *audiostop[] = {"playerctl", "stop", NULL};
+static const char *audionext[] = {"playerctl", "next", NULL};
+static const char *audioprev[] = {"playerctl", "previous", NULL};
 
 #include "movestack.c"
+#include <X11/XF86keysym.h>
 
 static Key keys[] = {
 	/* Programs */
@@ -69,6 +79,18 @@ static Key keys[] = {
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 
+	/* XF86Audio */
+	/* modifier                     key        function        argument */
+	{ 0,							XF86XK_AudioRaiseVolume, spawn,          {.v = audioraisevolume } },
+	{ 0,							XF86XK_AudioLowerVolume, spawn,          {.v = audiolowervolume } },
+	{ 0,							XF86XK_AudioMute, spawn,          {.v = audiomute } },
+	{ 0,							XF86XK_AudioMicMute, spawn,          {.v = audiomicmute } },
+	{ 0,							XF86XK_AudioPlay, spawn,          {.v = audioplay } },
+	{ 0,							XF86XK_AudioPause, spawn,          {.v = audiopause } },
+	{ 0,							XF86XK_AudioStop, spawn,          {.v = audiostop } },
+	{ 0,							XF86XK_AudioNext, spawn,          {.v = audionext } },
+	{ 0,							XF86XK_AudioPrev, spawn,          {.v = audioprev } },
+	
 	/* Stack */
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
