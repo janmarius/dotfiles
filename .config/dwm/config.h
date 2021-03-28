@@ -59,6 +59,9 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "alacritty", NULL };
+static const char *webbrowser[]  = { "firefox", NULL };
+static const char *filemanager[]  = { "alacritty", "-e", "ranger", NULL };
+static const char *filemanagergui[]  = { "thunar", NULL };
 static const char *audioraisevolume[] = {"pactl", "set-sink-volume", "@DEFAULT_SINK@", "+1%", NULL};
 static const char *audiolowervolume[] = {"pactl", "set-sink-volume", "@DEFAULT_SINK@", "-1%", NULL};
 static const char *audiomute[] = {"pactl", "set-sink-mute", "@DEFAULT_SINK@", "toggle", NULL};
@@ -77,6 +80,9 @@ static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
+	{ MODKEY,                       XK_w,      spawn,          {.v = webbrowser } },
+	{ MODKEY,                       XK_r,      spawn,          {.v = filemanager } },
+	{ MODKEY,                       XK_g,      spawn,          {.v = filemanagergui } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 
 	/* XF86Audio */
