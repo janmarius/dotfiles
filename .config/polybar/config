@@ -56,7 +56,7 @@ screenchange-reload = true
 [bar/example]
 modules-left = i3 
 modules-center = spotify
-modules-right = updates memory cpu temperature pulseaudio audiodevice xkeyboard weather date powermenu
+modules-right = updates memory cpu temperature pulseaudio audiodevice xkeyboard weather-yr date powermenu
 
 monitor = ${env:MONITOR:}
 width = 100%
@@ -297,9 +297,17 @@ label-indicator-underline = ${colors.secondary}
 
 
 
-[module/weather]
+[module/weather-ntfd]
 type = custom/script
 exec = busctl --user -j get-property io.ntfd /weather openweathermap.strings RenderedTemplate | jq -r .data
+interval = 60
+label-font = 5
+
+
+
+[module/weather-yr]
+type = custom/script
+exec = ~/.config/polybar/yr-weather.sh
 interval = 60
 label-font = 5
 

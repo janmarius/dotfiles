@@ -1,4 +1,4 @@
-cowsay -f moose "\"Sometimes it is the people no one can imagine anything of who do the things no one can imagine."\" - Alan Turing
+. ~/.scripts/cowsay-terminal.sh
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 

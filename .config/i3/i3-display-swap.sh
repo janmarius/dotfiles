@@ -12,9 +12,14 @@ if [[ $CURRENT_WORKSPACE == $PRIMARY_WORKSPACE ]]; then
 	i3-msg -q move workspace to output right
 	i3-msg -q workspace $OTHER_WORKSPACE
 	i3-msg -q move workspace to output right
+	sleep 0.1
+	i3-msg -q workspace $OTHER_WORKSPACE
 else
 	i3-msg -q workspace $OTHER_WORKSPACE
 	i3-msg -q move workspace to output right
 	i3-msg -q workspace $CURRENT_WORKSPACE
 	i3-msg -q move workspace to output right
+	sleep 0.1
+	i3-msg -q workspace $CURRENT_WORKSPACE
 fi
+
