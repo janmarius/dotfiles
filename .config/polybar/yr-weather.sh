@@ -1,3 +1,4 @@
+#!/bin/bash
 # Yr Weather Icons: https://hjelp.yr.no/hc/en-us/articles/203786121-Weather-symbols-on-Yr
 # Weather Icons Font: https://erikflowers.github.io/weather-icons/
 # Prerequisites: ttf-weather-icons

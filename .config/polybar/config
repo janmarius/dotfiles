@@ -310,6 +310,7 @@ type = custom/script
 exec = ~/.config/polybar/yr-weather.sh
 interval = 60
 label-font = 5
+click-left = firefox https://www.yr.no/en/forecast/hourly-table/1-2214222/Norway/Tr%C3%B8ndelag/Trondheim/Trondheim%20sentrum?i=0 &
 
 
 
