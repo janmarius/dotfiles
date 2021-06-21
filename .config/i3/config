@@ -43,7 +43,7 @@ set $font-size 13
 set $font-rofi "System San Francisco Display 18"
 
 # Wallpaper Path
-set $wallpaper ~/../onedrive/Bilder/Wallpaper/Mario-mario-wallpaper-hd-games-1920x1080.jpg
+set $wallpaper ~/../onedrive/Bilder/Wallpaper/makccr-wallpapers/alex-perez-marco-island.jpg
 
 # Software
 set $terminal alacritty
