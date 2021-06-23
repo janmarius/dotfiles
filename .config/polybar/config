@@ -200,8 +200,9 @@ label-unmounted-foreground = ${colors.foreground-alt}
 
 [module/updates]
 type = custom/script
-format-prefix = " "
 exec = echo `checkupdates 2> /dev/null | wc -l`  `yay -Qum 2> /dev/null | wc -l`
+;exec = echo `~/.scripts/updates.sh`
+;exec = echo `echo "Hei" 2> /dev/null | wc -l` `echo "Hei" 2> /dev/null | wc -l`
 interval = 900
 label = %output%
 label-font = 6

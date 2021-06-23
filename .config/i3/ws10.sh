@@ -1,13 +1,10 @@
 #!/bin/bash
 
 WORKSPACE=$1
-EQUALIZER=$2
-MUSIC_PLAYER=$3
+MUSIC_PLAYER=$2
 
-i3-msg "workspace $WORKSPACE; append_layout ~/.config/i3/workspace-10.json"
-
-# Equalizer
-$EQUALIZER & disown
+#i3-msg "workspace $WORKSPACE; append_layout ~/.config/i3/workspace-10.json"
+i3-msg workspace $WORKSPACE
 
 # Music Player
 $MUSIC_PLAYER & disown
