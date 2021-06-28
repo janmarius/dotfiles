@@ -75,7 +75,9 @@ ENABLE_CORRECTION="false"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+  git
+)
 
 
 
@@ -111,6 +113,7 @@ alias gde="cd ~/Desktop"
 alias god="cd /home/onedrive"
 alias gog="cd /home/onedrive/Guides"
 
+export VISUAL=nvim
 
 
 ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
