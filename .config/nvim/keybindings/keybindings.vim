@@ -1,3 +1,5 @@
+nnoremap <leader>s :source ~/.config/nvim/init.vim<CR>
+
 " Terminal, not working
 "nnoremap <leader>t :botright terminal<CR>
 
