@@ -1,3 +1,3 @@
 #!/bin/bash
 
-checkupdates > /home/janmarius/.scripts/updates/pacman-updates.txt && yay -Qum > /home/janmarius/.scripts/updates/aur-updates.txt
+checkupdates > $HOME/.scripts/updates/pacman-updates.txt && yay -Qum > $HOME/.scripts/updates/aur-updates.txt
