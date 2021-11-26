@@ -200,7 +200,7 @@ label-unmounted-foreground = ${colors.foreground-alt}
 
 [module/updates]
 type = custom/script
-exec = echo `cat ~/.scripts/updates/pacman-updates.txt | wc -l`  `cat ~/.scripts/updates/aur-updates.txt | wc -l`
+exec = echo  `cat ~/.scripts/updates/pacman-updates.txt | wc -l`  `cat ~/.scripts/updates/aur-updates.txt | wc -l`
 interval = 10
 label = %output%
 label-font = 6
