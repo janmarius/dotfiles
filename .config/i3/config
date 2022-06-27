@@ -51,7 +51,7 @@ set $wallpaper ~/../onedrive/Bilder/Wallpaper/makccr-wallpapers/alex-perez-marco
 
 # Software
 set $terminal alacritty
-set $web-browser firefox
+set $web-browser google-chrome-stable
 
 # Cheat Sheets
 set $cheat-sheet1 /usr/bin/xdg-open ~/.cheat-sheets/general.pdf
