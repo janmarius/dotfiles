@@ -9,6 +9,8 @@
 #     |_  / __| '_ \| '__/ __|
 #    _ / /\__ \ | | | | | (__ 
 #   (_)___|___/_| |_|_|  \___|
+#
+# Reloading the .zshrc: source ~/.zshrc
 
 
 ###############################################################################
@@ -103,3 +105,24 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 ###############################################################################
 
 bindkey -v
+
+
+
+
+
+
+
+
+
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+if command -v pyenv 1>/dev/null 2>&1; then
+	eval "$(pyenv init -)"
+fi
+
+
+
+
+
+
+
