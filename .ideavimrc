@@ -1,0 +1,15 @@
+set relativenumber
+set number
+
+let mapleader = " "
+
+nnoremap <leader>s :source ~/.ideavimrc <CR>
+nnoremap <c-f> :action GotoFile<CR>
+nmap <leader>n <action>(ActivateProjectToolWindow)
+nmap <leader>t <action>(ActivateTerminalToolWindow)
+nmap <c-l> <action>(PreviousTab)
+nmap <c-h> <action>(NextTab)
+nmap <leader>w <action>(CloseContent)
+
+
+set NERDTree
