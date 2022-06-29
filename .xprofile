@@ -4,3 +4,6 @@ xset -dpms
 xset s noblank
 # Faster key repeat and delay
 xset r rate 210 40
+
+# Set Caps Lock as Esc and both Shift keys as Caps Lock
+setxkbmap -option caps:escape,shift:both_capslock

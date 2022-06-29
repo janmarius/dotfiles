@@ -1,15 +1,61 @@
+" Set leader key
+let mapleader = " "
+
+" Line number option
 set relativenumber
 set number
 
-let mapleader = " "
-
+" Reload .ideavimrc
 nnoremap <leader>s :source ~/.ideavimrc <CR>
-nnoremap <c-f> :action GotoFile<CR>
+
+" Move code
+nmap <a-k> <action>(MoveLineUp)
+nmap <a-j> <action>(MoveLineDown)
+
+
+" Split
+nmap <leader>v <action>(SplitVertically)
+nmap <leader>h <action>(SplitHorizontally)
+nmap <leader>l <action>(MoveTabRight)
+
+nmap <leader>j <action>(MoveTabDown)
+" Move editor
+nmap <c-s-m> <action>(MoveEditorToOppositeTabGroup)
+
+" Editor navigation
+sethandler <c-j> a:vim
+sethandler <c-k> a:vim
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+
+" Tabs navigation
+nmap <TAB> <action>(NextTab)
+nmap <s-TAB> <action>(PreviousTab)
+
+" Closing editors
+nmap <c-w> <action>(CloseContent)
+nmap <c-q> <action>(CloseAllEditors)
+
+" Open tab in new window
+nmap <c-e> <action>(EditSourceInNewWindow)
+
+" Run current file
+nmap <leader>r <action>(RunClass)
+
+" File search
+nmap <leader>f <action>(GotoFile)
+
+" Activate project tree
 nmap <leader>n <action>(ActivateProjectToolWindow)
+
+" Activate terminal window
 nmap <leader>t <action>(ActivateTerminalToolWindow)
-nmap <c-l> <action>(PreviousTab)
-nmap <c-h> <action>(NextTab)
-nmap <leader>w <action>(CloseContent)
+nmap <c-t> <action>(Terminal.OpenInTerminal) " Open in current dir
 
+" Hide active window
+nmap <leader>q <action>(HideActiveWindow)
 
+" Activate NERDTree
 set NERDTree
