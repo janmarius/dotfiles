@@ -28,11 +28,14 @@
 ###############################################################################
 
 alias v="nvim"
+alias g.f="cd ~/dotfiles"
 alias g.c="cd ~/.config"
 alias gdo="cd ~/Downloads"
 alias gde="cd ~/Desktop"
 alias god="cd /home/onedrive"
 alias gog="cd /home/onedrive/Guides"
+alias gvc="cd ~/git"
+alias gas="cd ~/git/ast-zeabuz"
 
 
 
