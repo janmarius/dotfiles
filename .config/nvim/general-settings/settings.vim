@@ -45,8 +45,7 @@ set undofile
 set clipboard+=unnamedplus			" Copy paste between vim and everything else
 "set autochdir						" Your working directory will always be the same as your working directory
 
-
-" 
+set ignorecase						" Ignore case in search
 set modifiable
 
 set smartcase						" Automatically switch search to case-sensitive when search query contains an uppercase letter.

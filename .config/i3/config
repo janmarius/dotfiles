@@ -307,14 +307,14 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 bindsym $mod+p split toggle
 
 # Toggle FullScreen
-bindsym $mod+m fullscreen toggle 
+bindsym $mod+shift+m fullscreen toggle 
 
 # Move Workspace to Right Output
-bindsym $mod+shift+m move workspace to output right
+bindsym $mod+m move workspace to output right
 # bindsym $mod+shift+u move workspace to output left
 
 # Swapping Workspaces Among the Monitors
-bindsym $mod+shift+n exec ~/.config/i3/i3-display-swap.sh
+bindsym $mod+n exec ~/.config/i3/i3-display-swap.sh
 
 # Use Mouse+$mod to Drag Floating Windows to their Wanted Position
 floating_modifier $mod
