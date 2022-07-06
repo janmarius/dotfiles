@@ -12,15 +12,18 @@ nnoremap <leader>s :source ~/.ideavimrc <CR>
 nmap <a-k> <action>(MoveLineUp)
 nmap <a-j> <action>(MoveLineDown)
 
+nmap <leader>j <action>(GotoDeclaration)
+nmap <leader>k <action>(Back)
 
 " Split
-nmap <leader>v <action>(SplitVertically)
-nmap <leader>h <action>(SplitHorizontally)
-nmap <leader>l <action>(MoveTabRight)
+"nmap <leader>v <action>(SplitVertically)
+"nmap <leader>h <action>(SplitHorizontally)
+nmap <leader>v <action>(MoveTabRight)
 
-nmap <leader>j <action>(MoveTabDown)
+nmap <leader>h <action>(MoveTabDown)
+
 " Move editor
-nmap <c-s-m> <action>(MoveEditorToOppositeTabGroup)
+nmap <leader>m <action>(MoveEditorToOppositeTabGroup)
 
 " Editor navigation
 sethandler <c-j> a:vim

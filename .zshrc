@@ -27,7 +27,10 @@
 ###                                 Aliases                                 ###
 ###############################################################################
 
+# Software
 alias v="nvim"
+
+# Navigation
 alias g.f="cd ~/dotfiles"
 alias g.c="cd ~/.config"
 alias gdo="cd ~/Downloads"
@@ -36,6 +39,10 @@ alias god="cd /home/onedrive"
 alias gog="cd /home/onedrive/Guides"
 alias gvc="cd ~/git"
 alias gas="cd ~/git/ast-zeabuz"
+
+# Journal
+alias jreflector="journalctl -u reflector.service -f"
+alias jonedrive="journalctl --user-unit onedrive -f"
 
 
 
