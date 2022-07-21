@@ -11,6 +11,9 @@ nnoremap <leader>s :source ~/.ideavimrc <CR>
 vnoremap < <gv
 vnoremap > >gv
 
+" Fix copy paste
+set clipboard+=unnamed
+
 " Move code
 nmap <a-k> <action>(MoveLineUp)
 nmap <a-j> <action>(MoveLineDown)

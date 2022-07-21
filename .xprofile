@@ -8,4 +8,4 @@ xset r rate 210 40
 # Set Caps Lock as Esc and both Shift keys as Caps Lock
 # setxkbmap -option caps:escape # Make Caps Lock additional ESC
 setxkbmap -option caps:swapescape # Swap ESC and Caps Lock
-setxkbmap -option shift:both_capslock # Both Shift keys together toggle Caps Lock
+# setxkbmap -option shift:both_capslock # Both Shift keys together toggle Caps Lock
