@@ -3,7 +3,8 @@ set termguicolors
 
 " Removes pipes | that act as seperators on splits
 " note the significant whitespace after the '\' character
-set fillchars+=vert:\				" Removes pipes that act as seperators on splits
+" This made an error when running vim
+" set fillchars+=vert:\				" Removes pipes that act as seperators on splits
 
 " Noob Mode
 "set mouse=a						" Enable your mouse
